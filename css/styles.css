@@ -139,10 +139,6 @@ header .container{
 	margin: 0;
 }
 
-.hero-images{
-	
-}
-
 .hero-image{
 	animation: bounce 4s ease-in-out infinite, fade-in 1s forwards;
 }
@@ -308,9 +304,17 @@ footer .container{
 	padding-bottom: 100px;
 }
 
+
+
+
+
+
+
+/* About Page */
+
 body.dark {
 	color: white;
-	background: radial-gradient(ellipse 80% 10% at 50% 88%, #74726f, #56524b);
+	background: linear-gradient(to right, #56524c 79%, #44413d);
 }
 
 body.dark * {
@@ -318,17 +322,64 @@ body.dark * {
 	mix-blend-mode: unset;
 }
 
-.dark section {
-	padding: 250px 0;
-	height: 1600px;
+.picture-text-bio {
+	display: flex;
+	width: 1400px;
+	margin: 0 auto;
+	gap: 200px;
 }
 
-.about-card{
-	margin: 0 auto 100px;
-	width: 80%;
-	height: 1600px;
-	background: white;
+.bio-pics {
+	width: 600px;
+	position: relative;
+	animation: bounce 4s ease-in-out infinite, fade-in 1s forwards;
 }
+
+.bio-pic:hover{
+	z-index: 1;
+	scale: 1.03;
+	filter: blur(0);
+	transition: .3s;
+}
+
+.bio-pic1, .bio-pic2, .bio-pic3, .bio-pic4{
+	position: absolute;
+}
+
+.bio-pic1 {
+	opacity: 0;
+	top: 10%;
+	left: 10%;
+	animation: fade-in .2s .2s forwards;
+
+}
+
+.bio-pic2 {
+	opacity: 0;
+	top: 20%;
+	left: 20%;
+	animation: fade-in .2s .5s forwards;
+
+}
+
+.bio-pic4 {
+	opacity: 0;
+	top: 30%;
+	left: 30%;
+	animation: fade-in .2s .7s forwards;
+
+}
+
+.bio {
+	max-width: 500px;
+	min-width: 0;
+}
+
+
+
+
+
+/* portfolio Page */
 
 .albums {
 	padding: 150px 0;
