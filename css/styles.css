@@ -1,0 +1,459 @@
+
+
+*{
+	font-family: helvetica;
+	box-sizing: border-box;
+}
+
+body{
+	background: radial-gradient(ellipse 80% 10% at 50% 88%, #ffffff, #d8d8d8);
+	background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+h1,h2,h3,p,li,a{
+	color: #55524C;
+}
+
+h1{
+	font-size: 6rem;
+	font-weight: bold;
+	line-height: .85;
+	letter-spacing: -.06em;
+	margin-bottom: 0;
+}
+
+h2{
+	font-size: 3rem;
+}
+
+h3{
+	font-size: 2.25rem;
+}
+
+p{
+	font-size: 1rem;
+}
+
+a{
+	text-decoration: none;
+}
+
+nav ul{
+	list-style: none;
+	display: flex;
+	gap: 24px;
+}
+
+
+header{
+	padding: 80px 0 0 0;
+	width: 100%;
+	position: fixed;
+	z-index: 2;
+	mix-blend-mode: difference;
+}
+
+header a{
+	color: #82868C;
+}
+
+main{
+	padding-top: 150px;
+}
+
+.kern-z {
+  margin-left: .05em;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1755px); }
+}
+
+
+header .container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.container{
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.header-right{
+	display: flex;
+	gap: 48px;
+	align-items: baseline;
+}
+
+.header-cta{
+	font-size: 2.25rem;
+	text-decoration: none;
+}
+
+.header-cta:hover{
+	transform: scale(1.05);
+	color: lightcyan;
+}
+
+.logo{
+	width: 100px;
+	color: #82868C;
+}
+
+.hero {
+	position: relative;
+	height: 100vh;
+}
+
+.hero-text{
+	position: absolute;
+	bottom: 225px;
+	z-index: 2;
+}
+
+.hero-text p{
+	margin: 0;
+}
+
+.hero-images{
+	
+}
+
+.hero-image{
+	animation: bounce 4s ease-in-out infinite, fade-in 1s forwards;
+}
+
+.hero-image1{
+	opacity: 0;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	filter: blur(10px);
+	animation-delay: 0.1s
+}
+
+.hero-image2{
+	opacity: 0;
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	filter: blur(6px);
+	animation-delay: 0.2s
+}
+
+.hero-image3{
+	opacity: 0;
+	position: absolute;
+	top: 15%;
+	left: 35%;
+	filter: blur(3px);
+	animation-delay: 0.27s
+}
+
+.hero-image4{
+	opacity: 0;
+	position: absolute;
+	top: 20%;
+	left: 52%;
+	animation-delay: 0.35s;
+}
+
+.hero-image:hover{
+	z-index: 1;
+	scale: 1.03;
+	filter: blur(0);
+	transition: .3s;
+}
+
+.portfolio{
+	flex-direction: column;
+}
+
+.portfolio-gallery{
+	margin: auto;
+	width: 90%;
+	overflow: hidden;
+	transform: perspective(800px) rotateX(10deg);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.portfolio-portrait-gallery{
+	display: flex;
+	animation: scroll-left 17s linear infinite;
+	will-change: transform;
+}
+
+.portfolio-product-gallery{
+	display: flex;
+	animation: scroll-left 17s linear infinite reverse;
+	will-change: transform;
+}
+
+.portfolio-product-gallery:hover, .portfolio-portrait-gallery:hover{
+	animation-play-state: paused;
+}
+
+}
+
+.portfolio-portrait-gallery img,
+.portfolio-product-gallery img {
+  width: 600px;
+  flex-shrink: 0;
+}
+
+.portfolio img:hover{
+	transform: scale(1.05);
+}
+
+
+.services{
+	display: flex;
+	flex-direction: column;
+	margin-top: 200px;
+}
+
+.cards{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1350px;
+	width: 1350px;
+	margin: auto;
+}
+
+.card{
+	background-color: white;
+	padding: 24px;
+	box-shadow: 3px 3px 10px #969696;
+}
+
+.card:hover{
+	scale: 1.01;
+	box-shadow: 5px 5px 15px #9a9a9a;
+	background-color: white;
+}
+
+.contact{
+	height: 400px;
+	padding-top: 36px;
+	margin-top: 240px;
+	background: linear-gradient(to right, #56524c 79%, #44413d);
+	max-width: none;
+}
+
+.contact h2, .contact p, .contact a{
+	color: white;
+}
+
+.contact h2{
+	margin-bottom: 24px;
+}
+
+.watermark p{
+	font-size: 6rem;
+	font-weight: bold;
+	line-height: .85;
+	letter-spacing: -.06em;
+	color: white;
+	margin: 0;
+}
+
+footer li{
+	color: white;
+}
+
+
+footer ul{
+	margin: 0;
+}
+
+footer{
+	margin-top: 0;
+	background: linear-gradient(to right, #56524c 79%, #44413d);
+}
+
+footer .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 100px;
+}
+
+body.dark {
+	color: white;
+	background: radial-gradient(ellipse 80% 10% at 50% 88%, #74726f, #56524b);
+}
+
+body.dark * {
+	color: white;
+	mix-blend-mode: unset;
+}
+
+.dark section {
+	padding: 250px 0;
+	height: 1600px;
+}
+
+.about-card{
+	margin: 0 auto 100px;
+	width: 80%;
+	height: 1600px;
+	background: white;
+}
+
+.albums {
+	padding: 150px 0;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.album {
+	background: linear-gradient(to right, 
+	#89847c 0%,
+  #56524c 1%,
+  #57524c 45%,
+  #222222 46%,
+  #3b3935 47%,
+  #3b3834 53%,
+  #89847c 54%,
+  #56524c 55%,
+  #56524c 99%,
+  #222222 100%
+);
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	max-width: 1400px;
+	margin: 0 auto;
+	align-items: center;
+	box-shadow: 5px 3px 7px #0000008a;
+	border-radius: 3px;
+}
+
+.page-1, .page-2 {
+	position: relative;
+	height: 600px;
+
+}
+
+.page-1 {
+	background: linear-gradient(to right, #fcfcfc 0%, #ececec 25%, #ffffff 78%, #b2b1b1 100%);
+	padding: 30px 30px 60px;
+}
+
+.page-1::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, 
+    black 0%,
+    black 25%,
+    white 78%,
+    black 100%
+  );
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.page-2 {
+	background: linear-gradient(to right, #c7c7c7 0%, white 14%, #e2dfdf 37%, #fcfcfc 100%);
+	padding: 30px 30px 18px;
+}
+
+.page-2::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, black 0%, white 14%, #605f5f 37%, #848484 100%);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.page-2 h4{
+	font-size: 1.5rem;
+	font-weight: 100;
+	margin: 7px 0;
+	position: relative;
+	left: 561px;
+	width: fit-content;
+	top: 77px;
+
+}
+
+.page-image1{
+	width: 620px;
+}
+
+.page-image2{
+	width: 620px;
+}
+
+.page-edge1{
+	height: 600px;
+	width: 3px;
+	background-color: lightgrey;
+}
+
+.page-edge2 {
+	height: 598px;
+	width: 3px;
+	background-color: darkgrey;
+}
+
+/* services */
+
+.picture-text-container {
+	display: flex;
+	width: 1400px;
+	margin: 0 auto;
+}
+
+.editing-container{
+	display: flex;
+	width: 1400px;
+	justify-content: space-between;
+	margin: 0 auto;
+	gap: 24px;
+}
+
+.editing-container img{
+	min-width: 0%;
+	max-width: 100%;
+}
+
+
+
+
+
+
+
+
