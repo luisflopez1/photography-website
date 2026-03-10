@@ -387,6 +387,11 @@ body.dark * {
 	margin: 0 auto;
 }
 
+.albums h2 {
+	width: fit-content;
+	margin: 50px auto 24px;
+}
+
 .album {
 	background: linear-gradient(to right, 
 	#89847c 0%,
