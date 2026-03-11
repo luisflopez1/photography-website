@@ -485,24 +485,53 @@ body.dark * {
 	background-color: darkgrey;
 }
 
+
+
+
+
+
+
+
 /* services */
+.vertical-header {
+    position: fixed;
+    bottom: 100px;
+    margin: 0;
+    left: max(0px, calc((100vw - 1400px) / 2));
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.services-main{
+}
+
+.services-info{
+	width: 1400px;
+	margin: 0 auto;
+	padding-left: 150px;
+}
 
 .picture-text-container {
 	display: flex;
-	width: 1400px;
+	max-width: 1300px;
 	margin: 0 auto;
 }
 
 .editing-container{
 	display: flex;
-	width: 1400px;
+	max-width: 1400px;
 	justify-content: space-between;
 	margin: 0 auto;
 	gap: 24px;
 }
 
+.editing-card{
+	min-width: 0;
+}
+
 .editing-container img{
-	min-width: 0%;
+	height: auto;
 	max-width: 100%;
 }
 
