@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.page-image1').src = album[albumNum][counter][0];
-  document.querySelector('.page-image2').src = album[albumNum][counter][1];
-  document.querySelector('h4').innerHTML = `${counter + 1}/${album[albumNum].length}`;
-});
 
 const album = [
 	[
@@ -16,32 +11,37 @@ const album = [
 	]
 ];
 
+
 let albumNum = 0;
 let counter = 0;
 
+
+function toggleAlbumLabel() {
+  document.getElementById('portraits-label').classList.toggle('album-highlight');
+  document.getElementById('portraits-label').classList.toggle('album-dehighlight');
+  document.getElementById('product-label').classList.toggle('album-highlight');
+  document.getElementById('product-label').classList.toggle('album-dehighlight');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.page-image1').src = album[albumNum][counter][0];
+  document.querySelector('.page-image2').src = album[albumNum][counter][1];
+  document.querySelector('h4').innerHTML = `${counter + 1}/${album[albumNum].length}`;
+});
 document.querySelector('h2').addEventListener('click', () =>{
 	counter = 0;
+	toggleAlbumLabel();
 	if(albumNum === 1) {
-		document.querySelector('h2').innerHTML = '<span class="album-highlight">PORTRAITS</span> \\ <span class="album-dehighlight">PRODUCT</span>';
 		albumNum = 0;
-		document.querySelector('.page-image1').src = album[albumNum][counter][0];
-  		document.querySelector('.page-image2').src = album[albumNum][counter][1];
-  		document.querySelector('h4').innerHTML = `${counter + 1}/${album[albumNum].length}`;
 	} else if (albumNum === 0){
-		albumNum = 1
-		document.querySelector('h2').innerHTML = '<span class="album-dehighlight">PORTRAITS</span> / <span class="album-highlight">PRODUCT</span>';
-		document.querySelector('.page-image1').src = album[albumNum][counter][0];
-  		document.querySelector('.page-image2').src = album[albumNum][counter][1];
-  		document.querySelector('h4').innerHTML = `${counter + 1}/${album[albumNum].length}`;
+		albumNum = 1;
 	}
-
+	document.querySelector('.page-image1').src = album[albumNum][counter][0];
+	document.querySelector('.page-image2').src = album[albumNum][counter][1];
+	document.querySelector('h4').innerHTML = `${counter + 1}/${album[albumNum].length}`;
+	document.getElementById('slash').textContent = albumNum === 1 ? ' / ' : ' \\ ';
 })
-
-
 let interval = setInterval(turnPage, 3000);
-
-
-
 document.querySelector('.album').addEventListener('click', (e) => {
   clearInterval(interval);
   if (e.target.classList.contains('page-image1')) {
@@ -53,14 +53,10 @@ document.querySelector('.album').addEventListener('click', (e) => {
   document.querySelector('.page-image2').src = album[albumNum][counter][1];
   document.querySelector('h4').innerHTML = `${counter + 1}/${album[albumNum].length}`;
   interval = setInterval(turnPage, 3000);
-
 });
-
-
 function turnPage() {
   counter = (counter + 1) % album[albumNum].length;
   document.querySelector('.page-image1').src = album[albumNum][counter][0];
   document.querySelector('.page-image2').src = album[albumNum][counter][1];
   document.querySelector('h4').innerHTML = `${counter + 1}/${album[albumNum].length}`;
 }
-

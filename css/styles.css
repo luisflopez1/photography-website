@@ -389,7 +389,7 @@ body.dark * {
 
 .albums h2 {
 	width: fit-content;
-	margin: 5px auto 24px;
+	margin: 10px 0px 5px;
 }
 
 .album {
@@ -535,15 +535,51 @@ body.dark * {
 	max-width: 100%;
 }
 
+#portraits-label, #product-label {
+  transition: font-size 0.5s ease-in-out;
+}
+
 .album-highlight {
+	font-size: 3rem;
 	font-weight: bold;
 }
 
 .album-dehighlight {
+	font-size: 2.5rem;
 	font-weight: 100;
 }
 
+.page-image2 {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpolygon points='30,20 10,5 10,35' fill='%2355524C'/%3E%3C/svg%3E") 20 20, w-resize;
+}
 
+.page-image1 {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpolygon points='10,20 30,5 30,35' fill='%2355524C'/%3E%3C/svg%3E") 20 20, e-resize;
+}
+.album-highlight, .album-dehighlight {
+  cursor: pointer;
+}
+
+.page-1, .page-2 {
+  transition: opacity 0.2s;
+}
+
+.page-1:hover, .page-2:hover {
+  opacity: 0.85;
+}
+
+.album-dehighlight {
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.album-dehighlight:hover {
+  opacity: 0.7;
+}
+
+.album-highlight {
+  opacity: 1;
+}
 
 
 
