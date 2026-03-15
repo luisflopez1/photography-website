@@ -24,7 +24,10 @@
       </div>
     </header>
     <div class="albums">
-    <h2><span id="portraits-label" class="album-highlight">PORTRAITS</span> <span id="slash"> \ </span> <span id="product-label" class="album-dehighlight">PRODUCT</span></h2>
+    <div class="portfolio-header">
+      <h2><span id="portraits-label" class="album-highlight">PORTRAITS</span> <span id="slash"> \ </span> <span id="product-label" class="album-dehighlight">PRODUCT</span></h2>
+      <h4>01/05</h4>
+    </div>
   	<div class="album">
   	  <div class="page-edge2"></div>
   	  <div class="page-edge1"></div>	
@@ -33,7 +36,6 @@
   	  </div>
   	  <div class="page-2">
   		<img class="page-image2" src="../images/2.jpg" alt="photograph">
-  		<h4>01/05</h4>
   	  </div>
   	  <div class="page-edge1"></div>
   	  <div class="page-edge2"></div>
@@ -42,24 +44,37 @@
   	<section class="contact" id="contact">
         <div class="container">
           <h2>CONTACT</h2>
-          <a href="mailto:hello@luislopezphoto.com">hello@luislopezphoto.com</a> 
-          <p>(203) 414-6084</p>
-          <form></form>
+          <a href="mailto:hello@luislopezphoto.com">LUIS.LOPEZ0417@GMAIL.COM</a>
+          <p>&nbsp;· &nbsp;(203) 414-6084</p>
+          <form
+            action='https://formspree.io/f/xqeydalv'
+            method='POST'
+            class="contact-form"
+            >
+              <input type="text" name="_gotcha" style="display:none"> <!-- honeypot -->
+              <div class="form-row">
+              <input type="text" name="name" placeholder="NAME" required>
+              <input type="email" name="email" placeholder="EMAIL" required>
+              </div>
+              <textarea name="message" placeholder="MESSAGE" rows="4" required></textarea>
+              <div class="form-submit">
+              <button type="submit">SEND</button>
+              </div>
+            
+          </form>
         </div>
       </section>
-  	<footer>
+    </main>
+    <footer>
       <div class="container">
         <div class="watermark">
           <p>LUIS<br>LOPE<span class="kern-z">Z</span></p>
         </div>
         <nav aria-label="footer">
-          <ul>
-            <li>LINK 1</li>
-            <li>LINK 2</li>
-            <li>LINK 3</li>
-          </ul>
+          <p>© 2025 Luis Lopez Photography</p>
         </nav>
       </div>
     </footer>
-    <script src="../js/main.js"></script>
   </body>
+  <script src="../js/main.js"></script>
+</html>
